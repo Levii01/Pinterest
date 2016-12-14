@@ -1,6 +1,7 @@
 class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, expect: [:index, :show]
+  # before_action :authenticate_user!, expect: [:index, :show]
+  # This action use to action show and index for person not logged
   before_action :correct_user, only: [:edit, :update, :destroy]
 
   # GET /pins
